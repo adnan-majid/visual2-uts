@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 545
-  Top = 260
+  Left = 597
+  Top = 194
   Width = 736
   Height = 629
   Caption = 'Form1'
@@ -100,7 +100,7 @@ object Form1: TForm1
     ClipPoints = False
     Frame.Visible = False
     LeftAxis.Title.Angle = 0
-    View3DOptions.Elevation = 331
+    View3DOptions.Elevation = 315
     View3DOptions.Orthogonal = False
     View3DOptions.Perspective = 0
     View3DOptions.Rotation = 360

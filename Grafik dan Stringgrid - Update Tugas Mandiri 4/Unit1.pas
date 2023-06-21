@@ -19,9 +19,12 @@ type
     strngrd1: TStringGrid;
     cht1: TChart;
     psrsSeries1: TPieSeries;
+    btn3: TButton;
     procedure FormShow(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure charadd;
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,12 +64,31 @@ begin
 end;
 
 procedure TForm1.btn2Click(Sender: TObject);
+var a,b:Integer;
+begin
+  a:=strngrd1.Selection.Bottom - strngrd1.Selection.Top+1;
+  for b:=strngrd1.Selection.Bottom +1 to strngrd1.rowcount-1 do
+  strngrd1.Rows[b-a]:=strngrd1.Rows[b];
+  strngrd1.RowCount:=strngrd1.RowCount-1;
+  charadd; //procedure
+end;
+
+procedure TForm1.charadd;
 var i:Integer;
 begin
+  cht1.Series[0].Clear; //membersihkan tampilan char
   for i:=1 to strngrd1.rowcount-1 do
   begin
     cht1.Series[0].Add(StrToFloat(strngrd1.Cells[1,i]),strngrd1.Cells[2,i]);
   end;
+end;
+
+procedure TForm1.btn3Click(Sender: TObject);
+begin
+  strngrd1.RowCount:= strngrd1.RowCount-
+  MAX_PATH; //hapus isi data stringgrid all
+
+  charadd; //procedure
 end;
 
 end.
