@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 589
-  Top = 370
+  Left = 707
+  Top = 318
   Width = 534
   Height = 520
   Caption = 'Form1'
@@ -158,7 +158,7 @@ object Form1: TForm1
     Database = 'db_visual'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'D:\Campus\Extensi Uniska\Visual 2\libmysql.dll'
+    LibraryLocation = 'D:\Campus\Extensi Uniska\Visual 2\Kustomer\libmysql.dll'
     Left = 32
     Top = 288
   end
